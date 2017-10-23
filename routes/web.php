@@ -15,17 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('about',function(){
-    return 'about';
-});
-
 
 Route::get('blog',function(){
     return 'blog';
 });
 
-Route::get('contact',function(){
-    return 'contact';
-});
+Route::get('contact','PagesController@contact');
 
+Route::get('about','PagesController@about');
 
+Route::get('home', 'PagesController@home');
